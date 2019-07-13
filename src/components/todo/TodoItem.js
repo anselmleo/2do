@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 class Todoitem extends React.Component {
   render() {
@@ -29,7 +29,9 @@ const delStyle = {
   cursor: 'pointer'
 }
 
-Todoitem.propTypes = {
-  todo: PropTypes.object.isRequired
-}
+// PropTypes
+// Todoitem.propTypes = {
+//   todo: PropTypes.object.isRequired
+// }
+
 export default Todoitem
