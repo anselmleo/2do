@@ -25,11 +25,15 @@ class App extends React.Component
     ]
   }
 
+  markComplete = (e) => {
+    console.log('Hello lagos!')
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state.todos} markComplete={this.markComplete} />
       </div>
     );
   }
