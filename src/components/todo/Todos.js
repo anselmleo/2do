@@ -23,7 +23,7 @@ class Todos extends React.Component
 // }
 
 
-//PropTypes
+// PropTypes
 Todos.propTypes = {
   todos: PropTypes.array.isRequired
 }
