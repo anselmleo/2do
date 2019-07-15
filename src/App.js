@@ -3,23 +3,24 @@ import Header from './components/layout/Header';
 import AddTodo from './components/todo/AddTodo';
 import './App.css';
 import Todos from './components/todo/Todos';
+import uuid from 'uuid';
 
 class App extends React.Component
 {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: "Email MGi on progress of mindgamesincorporated.com",
         completed: false
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: "Finish albrichris homepage component",
         comleted: false 
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: "Confirm banner print status",
         completed: false
       }
@@ -41,11 +42,20 @@ class App extends React.Component
     })
   }
 
+  addTodo = (title) => {
+    const newTodo = {
+      id: uuid.v4(),
+      title,
+      completed: false
+    }
+    this.setState({todos: [...this.state.todos, newTodo]})
+  };
+
   render() {
     return (
       <div className="App">
         <Header />
-        <AddTodo />
+        <AddTodo addTodo={this.addTodo}/>
         <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
       </div>
     );
