@@ -18,15 +18,6 @@ class Todos extends React.Component
   }
 }
 
-// function Todos() {
-//   return (
-//     <div>
-//       <h1>Todos</h1>
-//     </div>
-//   );
-// }
-
-
 // PropTypes
 Todos.propTypes = {
   todos: PropTypes.array.isRequired

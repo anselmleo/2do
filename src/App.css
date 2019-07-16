@@ -9,7 +9,11 @@ body {
   line-height: 1.4;
 }
 
-a {
-  color: #333;
-  text-decoration: none;
+.nav {
+  color: white;
+  font-weight: bold;
+}
+
+.wrapper {
+  padding: 20px;
 }
